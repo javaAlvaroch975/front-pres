@@ -41,9 +41,9 @@ public class TablonService {
         alAnuncios.add("El tiempo lo dirá.");
     }
 
-    public Long rellenaBlog(Long numPosts) {
+    public Long rellenaTablon(Long numPosts) {
         for (long j = 0; j < numPosts; j++) {
-            // crea entity blog y la rellana con datos aleatorios
+            // crea entity tablon y la rellana con datos aleatorios
             TablonEntity oTablonEntity = new TablonEntity();
             oTablonEntity.setTitulo(alAnuncios.get(oAleatorioService.GenerarNumeroAleatorioEnteroEnRango(0, alAnuncios.size() - 1)));
             // rellena contenido
@@ -90,6 +90,7 @@ public class TablonService {
             // establecer fecha de creación y modificación
             oTablonEntity.setFechaCreacion(LocalDateTime.now());
             oTablonEntity.setFechaModificacion(null);
+            oTablonEntity.setPublico(oAleatorioService.GenerarNumeroAleatorioEnteroEnRango(0, 1) == 1);
             // guardar entity en base de datos
             oTablonRepository.save(oTablonEntity);
         }

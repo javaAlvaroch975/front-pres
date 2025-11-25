@@ -49,4 +49,40 @@ ALTER TABLE `blog`
 --
 ALTER TABLE `blog`
   MODIFY `id` bigint NOT NULL AUTO_INCREMENT;
+  -----------------
+-- Estructura de tabla para la tabla `tablon`
+--
+
+-- ------------------------------------------------ TABLA ALVARO
+
+CREATE TABLE `tablon` (
+  `id` bigint NOT NULL,
+  `titulo` varchar(1024) COLLATE utf32_unicode_ci NOT NULL,
+  `contenido` longtext COLLATE utf32_unicode_ci NOT NULL,
+  `etiquetas` varchar(1024) COLLATE utf32_unicode_ci NOT NULL,
+  `fecha_creacion` datetime NOT NULL,
+  `fecha_modificacion` datetime NOT NULL,
+  `publico` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci;
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `tablon`
+--
+ALTER TABLE `tablon`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `tablon`
+--
+ALTER TABLE `tablon`
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT;
+
 COMMIT;

@@ -90,7 +90,6 @@ public class BlogService {
             // establecer fecha de creación y modificación
             oBlogEntity.setFechaCreacion(LocalDateTime.now());
             oBlogEntity.setFechaModificacion(null);
-            oBlogEntity.setPublico(oAleatorioService.GenerarNumeroAleatorioEnteroEnRango(0, 1) == 1);
             // guardar entity en base de datos
             oBlogRepository.save(oBlogEntity);
         }
