@@ -61,7 +61,7 @@ CREATE TABLE `contreras` (
   `contenido` longtext COLLATE utf32_unicode_ci NOT NULL,
   `etiquetas` varchar(1024) COLLATE utf32_unicode_ci NOT NULL,
   `fecha_creacion` datetime NOT NULL,
-  `fecha_modificacion` datetime NOT NULL,
+  `fecha_modificacion` datetime DEFAULT NULL,
   `publico` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci;
 

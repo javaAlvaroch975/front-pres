@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "tablon")
+@Table(name = "contreras")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -44,5 +44,5 @@ public class TablonEntity {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", shape = JsonFormat.Shape.STRING)
     private LocalDateTime fechaModificacion;
     @NotNull
-    private boolean publico;
+    private boolean publico = false;
 }
